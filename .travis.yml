@@ -1,0 +1,11 @@
+sudo: required
+
+script:
+  - bash build.sh
+
+branches:
+  except:
+    - "/^(?i:continuous.*)$/"
+
+notifications:
+  email: false
