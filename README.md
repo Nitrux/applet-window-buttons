@@ -1,4 +1,4 @@
-# Window Buttons Applet [![Build Status](https://travis-ci.org/Nitrux/window-buttons-applet.svg?branch=master)](https://travis-ci.org/Nitrux/window-buttons-applet)
+# Window Buttons Applet [![Build Status](https://travis-ci.org/Nitrux/window-buttons-applet.svg?branch=main)](https://travis-ci.org/Nitrux/window-buttons-applet)
 
 A script to mirror the Windows Buttons Applet package into our repository.
 
