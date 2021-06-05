@@ -6,7 +6,7 @@
 	cd files
 
 	wget -q \
-		"https://launchpadlibrarian.net/523930266/applet-window-buttons_2.0.8.0-0~202102191722~rev159~pkg3~ubuntu20.04.1_amd64.deb"
+		"https://launchpadlibrarian.net/540974371/applet-window-buttons_2.0.9.0-0~202105290446~rev165~pkg3~ubuntu20.04.1_amd64.deb"
 )
 
 
