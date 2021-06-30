@@ -1,7 +1,11 @@
 sudo: required
 
+before_install:
+  - gem install package_cloud
+
 script:
   - bash build.sh
+  - package_cloud push nitrux/repo/debian/trixie *.deb
 
 branches:
   except:
