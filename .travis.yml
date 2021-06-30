@@ -1,15 +1,15 @@
-sudo: required
+dist: focal
 
 before_install:
   - gem install package_cloud
 
 script:
-  - bash build.sh
+  - sudo ./travis-build.sh
   - package_cloud push nitrux/repo/debian/trixie files/*.deb
 
 branches:
-  except:
-    - "/^(?i:continuous.*)$/"
+  only:
+    - main
 
 notifications:
   email: false
