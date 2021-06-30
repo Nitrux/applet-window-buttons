@@ -5,7 +5,7 @@ before_install:
 
 script:
   - bash build.sh
-  - package_cloud push nitrux/repo/debian/trixie *.deb
+  - package_cloud push nitrux/repo/debian/trixie files/*.deb
 
 branches:
   except:
