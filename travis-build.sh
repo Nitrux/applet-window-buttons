@@ -1,11 +1,36 @@
-#! /bin/sh
+#!/bin/bash
 
+set -x
 
-(
-	mkdir files
-	cd files
+apt -qq update
+apt -qq -yy install equivs curl git wget gnupg2
 
-	wget -q \
-		"https://launchpadlibrarian.net/540974374/applet-window-buttons_2.0.9.0-0~202105290446~rev165~pkg3~ubuntu21.04.1_amd64.deb"
-)
+### FIXME - the container mauikit/ubuntu-18.04-amd64 does have the neon repo but for some idiotic reason it isn't working here
 
+wget -qO /etc/apt/sources.list.d/neon-user-repo.list https://raw.githubusercontent.com/Nitrux/iso-tool/development/configs/files/sources.list.neon.user
+
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys \
+	55751E5D > /dev/null
+
+apt -qq update
+
+### Install Dependencies
+
+DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends devscripts debhelper gettext lintian build-essential automake autotools-dev cmake extra-cmake-modules appstream
+
+mk-build-deps -i -t "apt-get --yes" -r
+
+### Clone repo.
+
+git clone https://github.com/psifidotos/applet-window-buttons.git
+
+mv applet-window-buttons/* .
+
+rm -rf applet-window-buttons LICENSES README.md
+
+### Build Deb
+
+mkdir source
+mv ./* source/ # Hack for debuild
+cd source
+debuild -b -uc -us
