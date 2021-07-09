@@ -12,7 +12,7 @@ script:
 
 branches:
   only:
-    - main
+    - arm64
 
 notifications:
   email: false
