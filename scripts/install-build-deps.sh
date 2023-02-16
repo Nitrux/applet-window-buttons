@@ -30,6 +30,7 @@ $APT_COMMAND install -qy --no-install-recommends \
     libkf5i18n-dev \
     libkf5kcmutils-dev \
     libkf5kio-dev \
+    libkdecorations2-dev \
     libkf5networkmanagerqt-dev \
     libkf5newstuff-dev \
     libkf5notifications-dev \
