@@ -11,9 +11,6 @@ wget -qO /etc/apt/sources.list.d/neon-user-repo.list https://raw.githubuserconte
 
 git clone --depth 1 --branch $APPLETWINDOWBUTTONS_BRANCH https://github.com/psifidotos/applet-window-buttons.git
 
-mv applet-window-buttons/* .
-
-rm -rf applet-window-buttons LICENSES README.md
 
 ### Compile Source
 
