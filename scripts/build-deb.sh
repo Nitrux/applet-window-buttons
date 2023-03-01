@@ -2,15 +2,9 @@
 
 set -x
 
-### Update sources
-
-wget -qO /etc/apt/sources.list.d/neon-user-repo.list https://raw.githubusercontent.com/Nitrux/iso-tool/development/configs/files/sources.list.neon.user
-
-
 ### Download Source
 
 git clone --depth 1 --branch $APPLETWINDOWBUTTONS_BRANCH https://github.com/psifidotos/applet-window-buttons.git
-
 
 ### Compile Source
 
