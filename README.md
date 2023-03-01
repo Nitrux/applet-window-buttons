@@ -1,4 +1,4 @@
-# Applet Window Buttons [![Build Status](https://travis-ci.org/Nitrux/applet-window-buttons.svg?branch=main)](https://travis-ci.org/Nitrux/applet-window-buttons)
+# Applet Window Buttons
 
 Plasma 5 applet that shows window buttons in your panels.
 
